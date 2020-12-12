@@ -1,0 +1,13 @@
+[package]
+name = "csv2ndjson-lite"
+description = "A little tool to convert a csv to a valid ndjson/json-stream (supported comma separated arrays)"
+version = "0.1.0"
+edition = "2018"
+authors = ["Kerollmops <renault.cle@gmail.com>"]
+repository = "https://github.com/Kerollmops/csv2ndjson-lite"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+csv = "1.1.5"
+json = "0.12.4"
