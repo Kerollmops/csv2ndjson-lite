@@ -23,7 +23,7 @@ fn try_main() -> Result<(), Box<dyn Error>> {
             object.insert(&header, value);
         }
 
-        println!("{},", object.dump());
+        println!("{}", object.dump());
     }
 
     Ok(())
