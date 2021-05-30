@@ -22,7 +22,7 @@ cat mydata.csv | cargo run --release 'genres'
 The output of the previous command would be something like so.
 
 ```json
-{"title":"Carmencita","genres": ["Documentary","Short"] }
-{"title":"Miss Jerry","genres": ["Romance"]}
-{"title":"Corbett and Courtney Before the Kinetograph","genres":["Short","Sport"]}
+{"title":"Carmencita","genres":"Documentary,Short"}
+{"title":"Miss Jerry","genres":"Romance"}
+{"title":"Corbett and Courtney Before the Kinetograph","genres":"Short,Sport"}
 ```

@@ -1,11 +1,14 @@
 use std::collections::HashSet;
-use std::{env, io};
 use std::error::Error;
+use std::io::Write;
+use std::{env, io};
+
 use json::{object::Object, JsonValue};
 
 fn try_main() -> Result<(), Box<dyn Error>> {
     let array_fields: HashSet<_> = env::args().collect();
 
+    let mut wtr = io::stdout();
     let mut rdr = csv::Reader::from_reader(io::stdin());
     let headers = rdr.headers()?.clone();
 
@@ -23,7 +26,9 @@ fn try_main() -> Result<(), Box<dyn Error>> {
             object.insert(&header, value);
         }
 
-        println!("{}", object.dump());
+        let _ = wtr
+            .write_all(object.dump().as_bytes())
+            .and_then(|_| writeln!(wtr));
     }
 
     Ok(())
