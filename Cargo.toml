@@ -1,6 +1,6 @@
 [package]
 name = "csv2ndjson-lite"
-description = "A little tool to convert a csv to a valid ndjson/json-stream (supported comma separated arrays)"
+description = "A little tool to convert a csv to a valid ndjson/json-stream"
 version = "0.1.1"
 edition = "2018"
 authors = ["Kerollmops <renault.cle@gmail.com>"]
@@ -9,5 +9,7 @@ license = "MIT"
 readme = "README.md"
 
 [dependencies]
+anyhow = "1.0.40"
+structopt = { version = "0.3", default-features = false }
 csv = "1.1.5"
 json = "0.12.4"
