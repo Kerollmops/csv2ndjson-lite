@@ -1,7 +1,7 @@
 [package]
 name = "csv2ndjson-lite"
 description = "A little tool to convert a csv to a valid ndjson/json-stream"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2018"
 authors = ["Kerollmops <renault.cle@gmail.com>"]
 repository = "https://github.com/Kerollmops/csv2ndjson-lite"
